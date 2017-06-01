@@ -7,7 +7,7 @@ object MapUtils {
 
 
   def printMap(values : Map [String, Double]) = {
-    val sortedValues = values.toSeq.sortBy(_._1)
+    val sortedValues = values.toSeq.sortWith(_._1 < _._1)
     sortedValues.foreach(value => println(value.toString()))
   }
 
